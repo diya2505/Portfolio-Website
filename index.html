@@ -154,6 +154,37 @@
         </form>
         </section>
 
+
+
+<!--Script for message -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("5Epk3-I39ByKrBpYV"); 
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_c4sk2f8', 'template_qhva9kx', this)
+            .then(function() {
+                alert('Message sent successfully!');
+            }, function(error) {
+                alert('Failed to send message. Please try again later.');
+            });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
         <footer class="footer">
 
             <div class="social">
